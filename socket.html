@@ -8,7 +8,7 @@
     window.onload = function() {
       var stream = document.getElementById('stream');
       document.getElementById("input").focus();
-      var gSocket = new WebSocket("ws://localhost:8000/events/ws");
+      var gSocket = new WebSocket("ws://localhost:30125/events/ws");
       gSocket.onmessage = function(e) {
         var ao = JSON.parse(e.data);
         stream.innerHTML = htmlEscape(ao.str) + '<br>' + stream.innerHTML;
